@@ -1,4 +1,9 @@
-class BuiltInArray {
+package src.com.peace.collection;
+
+/*
+Built in array in java
+*/
+class Array {
     public static void main(String args[]) {
         int[] arr = {1,2,3,4};
         for (int i : arr) {

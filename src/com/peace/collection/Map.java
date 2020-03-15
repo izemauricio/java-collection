@@ -1,8 +1,11 @@
-import java.util.Map;
+package src.com.peace.collection;
 
-class Maps {
-    public static void main(String args[]) {
+class Map {
+
+    void hashmap() {
         // not keep order
+        // array of buckets pointing to a linked list
+
         java.util.Map<String, Integer> map = new java.util.HashMap<>();
 
         map.put("gold", 50);
@@ -48,7 +51,7 @@ class Maps {
         map.remove("oil"); // no exception when the key is invalid
 
         // iterate Entry
-        for (Map.Entry<String, Integer> e : map.entrySet()) {
+        for (java.util.Map.Entry<String, Integer> e : map.entrySet()) {
             System.out.println("Key: " + e.getKey());
             System.out.println("Value: " + e.getValue());
             System.out.println("Entry.toString(): " + e.toString()); // stone=100
@@ -65,24 +68,32 @@ class Maps {
             }
         }
         // print <key,value>
-        for (Map.Entry<Character, Integer> e : counter.entrySet()) {
+        for (java.util.Map.Entry<Character, Integer> e : counter.entrySet()) {
             System.out.println("" + e.getKey() + ": " + e.getValue());
         }
         // sort hashmap by value desc (no collection method available)
         // LinkedHashMap garantee to keep insertion order
         // TreeMap is not useful bc it sorts by key at each insertion, but not by value
-        java.util.List<Map.Entry<Character, Integer>> entries = new java.util.ArrayList<>(counter.entrySet());
-        java.util.Collections.sort(entries, new java.util.Comparator<Map.Entry<Character, Integer>>() {
+        java.util.List<java.util.Map.Entry<Character, Integer>> entries = new java.util.ArrayList<>(counter.entrySet());
+        java.util.Collections.sort(entries, new java.util.Comparator<java.util.Map.Entry<Character, Integer>>() {
             @Override
-            public int compare(Map.Entry<Character, Integer> o1, Map.Entry<Character, Integer> o2) {
+            public int compare(java.util.Map.Entry<Character, Integer> o1, java.util.Map.Entry<Character, Integer> o2) {
                 // return o2.getValue().compareTo(o1.getValue()); // bigger to small
                 return o2.getValue() - o1.getValue(); // bigger to small
             }
         });
         java.util.Map<Character, Integer> sortedMap = new java.util.LinkedHashMap<>();
-        for (Map.Entry<Character, Integer> e : entries) {
+        for (java.util.Map.Entry<Character, Integer> e : entries) {
             sortedMap.put(e.getKey(), e.getValue());
         }
         System.out.println(sortedMap);
+    }
+
+    void treemap() {
+        // sort by key value at each insertion
+        // 
+    }
+    public static void main(String args[]) {
+        
     }
 }

@@ -1,3 +1,5 @@
+package src.com.peace.graph;
+
 class BinaryTree {
     class Node {
         int value;

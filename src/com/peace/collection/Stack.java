@@ -1,3 +1,5 @@
+package src.com.peace.collection;
+
 class Stack {
     public static void main(String args[]) {
         java.util.Stack<Integer> s = new java.util.Stack<Integer>();

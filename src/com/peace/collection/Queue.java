@@ -1,3 +1,5 @@
+package src.com.peace.collection;
+
 class Queue {
     public static void main(String args[]) {
         java.util.Queue<Integer> q = new java.util.LinkedList<Integer>();
