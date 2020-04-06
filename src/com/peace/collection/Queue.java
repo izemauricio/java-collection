@@ -1,4 +1,4 @@
-package src.com.peace.collection;
+package com.peace.collection;
 
 class Queue {
     public static void main(String args[]) {

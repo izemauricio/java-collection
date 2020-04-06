@@ -1,4 +1,4 @@
-package src.com.peace.graph;
+package com.peace.graph;
 
 import java.util.Collection;
 import java.util.List;

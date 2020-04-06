@@ -1,4 +1,4 @@
-package src.com.peace.collection;
+package com.peace.collection;
 
 /*
 Built in array in java

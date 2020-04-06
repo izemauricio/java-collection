@@ -1,4 +1,4 @@
-package src.com.peace.graph;
+package com.peace.graph;
 
 class BinaryTree {
     class Node {

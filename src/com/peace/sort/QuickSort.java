@@ -1,4 +1,4 @@
-package src.com.peace.sort;
+package com.peace.sort;
 
 public class QuickSort {
 
