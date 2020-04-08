@@ -1,6 +1,8 @@
 package com.peace.collection;
 
-class Map {
+import java.util.*;
+
+class Maps {
 
     void hashmap() {
         // not keep order
@@ -67,10 +69,12 @@ class Map {
                 counter.put(c, 1);
             }
         }
+
         // print <key,value>
         for (java.util.Map.Entry<Character, Integer> e : counter.entrySet()) {
             System.out.println("" + e.getKey() + ": " + e.getValue());
         }
+
         // sort hashmap by value desc (no collection method available)
         // LinkedHashMap garantee to keep insertion order
         // TreeMap is not useful bc it sorts by key at each insertion, but not by value
@@ -91,9 +95,71 @@ class Map {
 
     void treemap() {
         // sort by key value at each insertion
-        // 
+        //
     }
+
+    void testHashMapInsertionOrder() {
+        // empty map
+        HashMap<String, String> map = new HashMap<>();
+
+        // populate
+        map.put("key1", "value1");
+        map.put("key4", "value4");
+        map.put("key2", "value2");
+        map.put("key3", "value3");
+        map.put("key9", "value9");
+        map.put("key6", "value6");
+        map.put("key18", "value18");
+        map.put("key10", "value10");
+
+        // interate
+        for (java.util.Map.Entry<String, String> entry : map.entrySet()) {
+            System.out.println(entry.getKey() + entry.getValue()); // fora de ordem de insercao: 1 2 6 18 3 4 9 10
+        }
+    }
+
+    void testTreeMapInsertionOrder() {
+        // empty map
+        TreeMap<String, String> map = new TreeMap<>();
+
+        // populate
+        map.put("key1", "value1");
+        map.put("key4", "value4");
+        map.put("key2", "value2");
+        map.put("key3", "value3");
+        map.put("key9", "value9");
+        map.put("key6", "value6");
+        map.put("key18", "value18");
+        map.put("key10", "value10");
+
+        // interate
+        for (java.util.Map.Entry<String, String> entry : map.entrySet()) {
+            System.out.println(entry.getKey() + entry.getValue()); // sort keys by natural order at insertion in logn: 1
+                                                                   // 10 18 2 3 4 6 9
+        }
+    }
+
+    void testLinkedHashMapInsertionOrder() {
+        // empty map
+        LinkedHashMap<String, String> map = new LinkedHashMap<>();
+
+        // populate
+        map.put("key1", "value1");
+        map.put("key4", "value4");
+        map.put("key2", "value2");
+        map.put("key3", "value3");
+        map.put("key9", "value9");
+        map.put("key6", "value6");
+        map.put("key18", "value18");
+        map.put("key10", "value10");
+
+        // interate
+        for (java.util.Map.Entry<String, String> entry : map.entrySet()) {
+            System.out.println(entry.getKey() + entry.getValue()); // keey insertion order: 1 4 2 3 9 6 18 10
+        }
+    }
+
     public static void main(String args[]) {
-        
+        new Maps().testLinkedHashMapInsertionOrder();
     }
 }

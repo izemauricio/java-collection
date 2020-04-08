@@ -8,16 +8,6 @@ import java.util.*;
         Do a iterative dfs in-order, pre-order and post-order
 */
 
-class Node {
-    int value;
-    Node left, right;
-
-    public Node(int value) {
-        this.value = value;
-        left = right = null;
-    }
-}
-
 class RecursiveDFS {
 
     /*
