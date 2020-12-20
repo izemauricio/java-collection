@@ -2,7 +2,7 @@ package com.peace.sort;
 
 public class QuickSort {
 
-    void quicksort(int[] arr, int lo, int hi) {
+    public void quicksort(int[] arr, int lo, int hi) {
         if (lo >= hi) {
             return;
         }

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry excluding="com/peace/graph/|com/peace/random/|com/peace/sort/|com/peace/array/" kind="src" path="src"/>
+	<classpathentry kind="src" path="src/com/peace/array"/>
+	<classpathentry kind="src" path="src/com/peace/graph"/>
+	<classpathentry kind="src" path="src/com/peace/random"/>
+	<classpathentry kind="src" path="src/com/peace/sort"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
